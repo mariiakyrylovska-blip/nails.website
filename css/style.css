@@ -401,6 +401,21 @@ input[type="file"]::file-selector-button:hover{
     width: 100%;
   }
 
+  /* HOME PAGE: Hide top Book button on mobile */
+  .topbar .btn-primary {
+    display: none !important;
+  }
+
+  /* BOOK PAGE: Hide Home button on mobile */
+  .topbar .btn-ghost {
+    display: none !important;
+  }
+
+  /* BOOK PAGE: Hide footer text on mobile */
+  .footer-note {
+    display: none !important;
+  }
+
   /* Hero page */
   .hero{
     min-height: 100vh;
@@ -503,12 +518,6 @@ input[type="file"]::file-selector-button:hover{
   .hero .content{ width: 94vw; }
   .hero h1{ font-size: clamp(24px, 9vw, 36px); }
 
-  /* PAGE 1 (Home): Hide top Book button on mobile */
-  .hero ~ .topbar .btn-primary,
-  body:has(.hero) .topbar .btn-primary {
-    display: none;
-  }
-
   /* PAGE 2 (Services): Center heading, cleaner spacing */
   .section-head h2{
     font-size: 24px;
@@ -535,11 +544,6 @@ input[type="file"]::file-selector-button:hover{
     line-height: 1.4;
   }
 
-  /* PAGE 3 (Book): Hide Home button on mobile */
-  .topbar .btn-ghost {
-    display: none;
-  }
-
   /* Make subtitle black instead of pink */
   .form-card .sub {
     color: var(--text);
@@ -547,11 +551,6 @@ input[type="file"]::file-selector-button:hover{
   }
 
   .form-card h2{ font-size: 26px; }
-
-  /* Hide footer text on mobile */
-  .footer-note {
-    display: none;
-  }
 
   /* Photo upload field styling */
   .photo-field .helper-text {
