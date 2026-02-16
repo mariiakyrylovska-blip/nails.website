@@ -44,12 +44,28 @@
               <option>Pastel pink medium set</option>
               <option>Black short set</option>
               <option>Long set with design</option>
+              <option>Custom style</option>
             </select>
           </div>
 
           <div class="field">
-            <label for="msg">Message / inspo</label>
-            <textarea id="msg" name="message" placeholder="What style? Date/time you want? Any inspo link?"></textarea>
+            <label for="date">Preferred date</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+
+          <div class="field">
+            <label for="time">Preferred time</label>
+            <input type="time" id="time" name="time" required />
+          </div>
+
+          <div class="field">
+            <label for="msg">Style details & inspiration</label>
+            <textarea id="msg" name="message" placeholder="Describe your desired style, include any inspiration details or links" required></textarea>
+          </div>
+
+          <div class="field">
+            <label for="photo">Inspiration photo (optional)</label>
+            <input type="file" id="photo" name="photo" accept="image/jpeg,image/jpg,image/png" />
           </div>
 
           <div class="form-actions">
