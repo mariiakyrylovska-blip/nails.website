@@ -267,7 +267,7 @@ img{ max-width:100%; display:block; height: auto; }
 }
 .form-card .sub{
   margin: 0 0 20px;
-  color: #ff7fb7;
+  color: var(--text);
   font-size: 15px;
   font-weight: 500;
 }
