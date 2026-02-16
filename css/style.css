@@ -286,6 +286,13 @@ label{
   letter-spacing: 0.2px;
 }
 
+.helper-text{
+  font-size: 12px;
+  color: rgba(255,127,183,.65);
+  margin: 2px 0 6px;
+  font-weight: 400;
+}
+
 input, select, textarea{
   width: 100%;
   padding: 13px 15px;
@@ -496,9 +503,80 @@ input[type="file"]::file-selector-button:hover{
   .hero .content{ width: 94vw; }
   .hero h1{ font-size: clamp(24px, 9vw, 36px); }
 
-  .section-head h2{ font-size: 24px; }
-  .custom-cta h3{ font-size: 18px; }
+  /* PAGE 1 (Home): Hide top Book button on mobile */
+  .hero ~ .topbar .btn-primary,
+  body:has(.hero) .topbar .btn-primary {
+    display: none;
+  }
+
+  /* PAGE 2 (Services): Center heading, cleaner spacing */
+  .section-head h2{
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .ig-line{
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .custom-cta{
+    margin-top: 20px;
+    margin-bottom: 24px;
+    padding: 20px 18px;
+  }
+  .custom-cta h3{
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .custom-cta p{
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+
+  /* PAGE 3 (Book): Hide Home button on mobile */
+  .topbar .btn-ghost {
+    display: none;
+  }
+
+  /* Make subtitle black instead of pink */
+  .form-card .sub {
+    color: var(--text);
+    font-weight: 500;
+  }
+
   .form-card h2{ font-size: 26px; }
 
-  .ig-line{ font-size: 13px; }
+  /* Hide footer text on mobile */
+  .footer-note {
+    display: none;
+  }
+
+  /* Photo upload field styling */
+  .photo-field .helper-text {
+    font-size: 12px;
+    color: rgba(255,127,183,.65);
+    margin: 2px 0 6px;
+    font-weight: 400;
+  }
+
+  .photo-field input[type="file"] {
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 2px solid rgba(255,127,183,.25);
+    background: rgba(255,255,255,.95);
+    font-size: 13px;
+  }
+
+  .photo-field input[type="file"]::file-selector-button {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 2px solid var(--pink);
+    background: rgba(255,127,183,.08);
+    color: var(--pink2);
+    font-weight: 600;
+    font-size: 12px;
+    margin-right: 10px;
+  }
 }
